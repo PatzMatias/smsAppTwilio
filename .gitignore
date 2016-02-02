@@ -3,3 +3,4 @@ wp-config.php
 wp-content/uploads
 wp-content/plugins/gk-sms/
 wp-content/plugins/wp-twilio-core/
+.htaccess
