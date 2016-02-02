@@ -1,2 +1,5 @@
+twilio_creds.txt
 wp-config.php
 wp-content/uploads
+wp-content/plugins/gk-sms/
+wp-content/plugins/wp-twilio-core/
