@@ -36,7 +36,7 @@ jQuery.noConflict();
 			    	}
 
 			    	var ajax_settings = {
-			    		method: "GET",
+			    		method: "POST",
 						url: endpoint,
 						data: { 
 							to: number, 

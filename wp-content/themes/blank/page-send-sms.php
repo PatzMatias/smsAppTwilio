@@ -22,7 +22,7 @@ get_header(); ?>
 	</div>
 	<div class="row">
 		<div class="col-sm-5">
-			<form name="sendSms" method="GET">
+			<form name="sendSms" method="POST">
 				<div class="form-group">
 					<label for="to">To: </label>
 					<input class="form-control" type="text" name="to" placeholder="Number">

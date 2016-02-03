@@ -12,7 +12,7 @@ function api_hooks() {
 	$twilioNum = get_option('phoneNumber');
 
     register_rest_route( $namespace, '/send/', array(
-        'methods' => 'GET',
+        'methods' => 'POST',
         'callback' => 'wpsms_send',
     ) );
 
@@ -26,9 +26,9 @@ function wpsms_send( WP_REST_Request $request ){
 	global $account_sid;
     global $auth_token;
     global $twilioNum;
-    
-	$to = (isset($_GET['to'])) ? $_GET['to'] : false;
-	$content = (isset($_GET['content'])) ? $_GET['content'] : false;
+
+	$to = (isset($_POST['to'])) ? $_POST['to'] : false;
+	$content = (isset($_POST['content'])) ? $_POST['content'] : false;
 	$user_msgs;
 
 	try {
