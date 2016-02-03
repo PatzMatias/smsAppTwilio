@@ -19,7 +19,7 @@ jQuery.noConflict();
 
   	var actions = {
   		init: function(){
-  			this.sendSms();
+  			//this.sendSms();
   			//if($listSms.length > 0) this.listSms();
   		},
   		sendSms: function(){
