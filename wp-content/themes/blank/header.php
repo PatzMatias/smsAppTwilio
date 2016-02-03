@@ -45,8 +45,8 @@
 	    </div>
 		<div class="collapse navbar-collapse" id="actionMenu">
 			<ul class="nav navbar-nav">
-				<li class="<?php if(is_page('send-sms')) echo 'active';?>"><a href="/send-sms">Send SMS</a></li>
-				<li class="<?php if(is_page('list-sms')) echo 'active';?>"><a href="/list-sms">List SMS</a></li>
+				<li class="<?php if(is_page('send-sms')) echo 'active';?>"><a href="<?php if($_SERVER['SERVER_NAME'] == '54.201.36.22') echo '/twilioSms'; ?>/send-sms">Send SMS</a></li>
+				<li class="<?php if(is_page('list-sms')) echo 'active';?>"><a href="<?php if($_SERVER['SERVER_NAME'] == '54.201.36.22') echo '/twilioSms'; ?>/list-sms">List SMS</a></li>
 			</ul>
 		</div>
 	</nav>
