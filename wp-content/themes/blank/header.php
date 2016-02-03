@@ -18,33 +18,36 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
+<?php
+	if ( is_admin_bar_showing() ) :
+?>
+	<style>
+		.wrapper .navbar-fixed-top{
+			margin-top: 32px;
+		}
+	</style>
+<?php
+	endif;
+?>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'blank' ); ?></a>
-
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'blank' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+<div class="wrapper">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#actionMenu" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+	        	<span class="icon-bar"></span>
+	        	<span class="icon-bar"></span>
+	       		<span class="icon-bar"></span>
+			</button>
+	     	 <a class="navbar-brand" href="/">TwilioSMS</a>
+	    </div>
+		<div class="collapse navbar-collapse" id="actionMenu">
+			<ul class="nav navbar-nav">
+				<li class="<?php if(is_page('send-sms')) echo 'active';?>"><a href="/send-sms">Send SMS</a></li>
+				<li class="<?php if(is_page('list-sms')) echo 'active';?>"><a href="/list-sms">List SMS</a></li>
+			</ul>
+		</div>
+	</nav>
+<?php //wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>

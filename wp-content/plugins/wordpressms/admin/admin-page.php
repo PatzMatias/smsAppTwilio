@@ -3,17 +3,16 @@
 	    global $sms_settings_hook;
 	    global $sms_twilio_hook;
 
-	    $sms_settings_hook = add_menu_page('SMS Settings', 'SMS Settings', 'manage_options', 
-	        'sms_settings', 'sms_settings_page');
+	    $sms_settings_hook = add_menu_page('Messaging', 'Messaging', 'manage_options', 
+	        'messaging', 'sms_settings_page');
 	         
-	    $sms_twilio_hook = add_submenu_page('sms_settings', 
+	    $sms_twilio_hook = add_submenu_page('messaging', 
 	        'Twilio Credentials Settings', 'Twilio Credentials', 'manage_options', 
 	        'twilio_creds', 'twilio_form'); 
 	}
 
 	function sms_settings_page(){
 ?>
-
 	<div class="wrap">
 		<h2>SMS Settings</h2>
 	</div>
