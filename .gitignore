@@ -4,3 +4,5 @@ wp-content/uploads
 wp-content/plugins/gk-sms/
 wp-content/plugins/wp-twilio-core/
 .htaccess
+node_modules
+bower_components
