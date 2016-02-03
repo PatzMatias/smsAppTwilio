@@ -20,7 +20,7 @@ jQuery.noConflict();
   	var actions = {
   		init: function(){
   			this.sendSms();
-  			if($listSms.length > 0) this.listSms();
+  			//if($listSms.length > 0) this.listSms();
   		},
   		sendSms: function(){
 		  	var endpoint = namespace+"send/";
