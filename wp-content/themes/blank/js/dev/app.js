@@ -10,7 +10,7 @@ jQuery.noConflict();
   	if(window.location.hostname == "twil.io"){
  		path = window.location.origin;
  	} else if (window.location.hostname = "54.201.36.22"){
- 		path = window.location.origin+"/smsapp";
+ 		path = window.location.origin+"/twilioSms";
  	}
 
 
