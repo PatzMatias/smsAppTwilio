@@ -30,7 +30,7 @@ jQuery.noConflict();
 			    	var number = $(this).find('input[name="to"]').val();
 			    	var message = $(this).find('textarea[name="message"]').val();
 
-			    	if(number == "" || messsage == "") {
+			    	if(number == "" || message == "") {
 			    		alert("fill all fields.");
 			    		return;
 			    	}
