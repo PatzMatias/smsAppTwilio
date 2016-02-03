@@ -12,7 +12,7 @@ function api_hooks() {
 	$auth_token = get_option('authToken');
 	$twilioNum = get_option('phoneNumber');
     register_rest_route( $namespace, '/send/', array(
-        'methods' => 'POST',
+        'methods' => 'GET',
         'callback' => 'wpsms_send',
     ) );
 
