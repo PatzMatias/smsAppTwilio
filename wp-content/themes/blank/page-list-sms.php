@@ -17,7 +17,7 @@ get_header();
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-sm-6">
-			<h2>Sent List</h2>
+			<h2>List</h2>
 		</div>
 	</div>
 </div>
