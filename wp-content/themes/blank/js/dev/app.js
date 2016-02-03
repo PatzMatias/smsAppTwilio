@@ -10,7 +10,7 @@ jQuery.noConflict();
 
   	if(window.location.hostname == "twil.io"){
  		path = window.location.origin;
- 	} else if (window.location.hostname = "54.201.36.22"){
+ 	} else if (window.location.hostname == "54.201.36.22"){
  		path = window.location.origin+"/twilioSms";
  	}
 
@@ -19,8 +19,8 @@ jQuery.noConflict();
 
   	var actions = {
   		init: function(){
-  			//this.sendSms();
-  			//if($listSms.length > 0) this.listSms();
+  			this.sendSms();
+  			if($listSms.length > 0) this.listSms();
   		},
   		sendSms: function(){
 		  	var endpoint = namespace+"send/";
